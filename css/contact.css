@@ -1,0 +1,95 @@
+/* 联系我页面的CSS样式文件 */
+
+/* 联系方式部分 */
+.contact_way{
+	height: 160px;
+	width: 100%;
+	background: #333333;
+	color: #FFFFFF;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.way{
+	display: inline-block;
+	width: 20%;
+	height: 100%;
+	padding: 30px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* way下的p标签 */
+.way p{
+	font-size: 15px;
+}
+
+/* 表单提交部分 */
+.contact_content{
+	padding: 30px;
+	width: 100%;
+	height: 550px;
+	
+}
+
+/* 表单的标题 */
+.contact_content .contact_title{
+	width: 30%;
+	margin: 0 auto;
+}
+
+/* 表单提交内容 */
+.contact_content .contact_form{
+	width: 30%;
+	margin: 0 auto;
+}
+
+.contact_content .contact_form .mui-input-group div{
+	padding: 10px;
+}
+
+.contact_content .contact_form .mui-input-group label{
+	font-size: 15px;
+	font-weight: 700;
+}
+
+
+/* 名字、邮箱输入框 */
+.small_input input{
+	width: 100%;
+	height: 30px;
+	margin-top: 5px;
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+
+/* 反馈内容输入框 */
+.big_input textarea{
+	width: 100%;
+	height: 150px;
+	margin-top: 5px;
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+
+/* 设置输入框聚焦的时候边框颜色 */
+.small_input input:focus,
+.big_input textarea:focus{
+	outline: none;
+	border-color: #FF7F50;
+}
+
+/* 提交按钮样式 */
+.form_btn{
+	width: 100px;
+	height: 50px;
+	background: #333333;
+	color: #FF7F50;
+	float: right;
+}
+
+/* 设置按钮的移入效果 */
+.form_btn:hover{
+	background: #FF7F50;
+	color: #333333;
+}

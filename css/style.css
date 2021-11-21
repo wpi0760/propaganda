@@ -1,0 +1,281 @@
+@import url("//at.alicdn.com/t/font_2695405_j7jy3hdngl.css");
+
+/* 首先要清除样式，因为浏览器有默认样式，需要进行清除 */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	/* 设置box-sizing为border-box的原因是防止之后给元素添加padding的时候不会影响到整体的布局 */
+}
+
+/* 设置主要内容的样式 */
+html,
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	/* 一个比较好的字体样式，可以根据自己的喜好选择 */
+}
+
+/* 设置a标签的样式 */
+a {
+	color: #333;
+	text-decoration: none;
+	/* 将a标签的下划线去除 */
+}
+
+/* 清楚浮动的div样式 */
+.clr{
+	clear: both;
+}
+
+/* 设置标题标签的样式 */
+h1,
+h2,
+h3 {
+	padding-bottom: 20px;
+	/* 设置这些元素的下内边距为20px */
+}
+
+/* 设置p标签的样式 */
+p {
+	margin: 10px 0;
+}
+
+/* 容器样式，使用的页面可能会很多所以统一进行设置 */
+.container {
+	margin: 0 auto;
+	max-width: 1100px;
+	overflow: hidden;
+	/* 防止margin塌陷和清除浮动 */
+	padding: 0 20px;
+	font-size: 15px;
+}
+
+/* 暗色的按钮样式 */
+.btn_about_dark {
+	background: #444;
+	color: coral;
+}
+
+/* header的样式设置 */
+.index_header {
+	width: 100%;
+	text-align: center;
+}
+
+/* 文字的样式 */
+.text_primary {
+	color: #FF7F50;
+}
+
+/* 设置导航栏样式 */
+#navBar {
+	background: #333333;
+	color: white;
+	overflow: auto;
+	/* 如果元素中的内容超出了给定的宽度和高度属性
+	overflow 属性可以确定是否显示滚动条等行为。 */
+	/* auto为自动判断 */
+}
+
+/* 导航栏中的a标签之前设置的颜色#333和导航栏背景颜色冲突
+ 所以要重新给定导航栏中的a标签的颜色*/
+#navBar a {
+	color: white;
+}
+
+/* 导航栏中的whkgogo文字部分是h1，需要该部分左浮动*/
+#navBar h1 {
+	float: left;
+	padding-top: 20px;
+}
+
+/* 导航栏中的列表是ul标签，需要右浮动，并且需要清除默认的样式 */
+#navBar ul {
+	float: right;
+	list-style: none;
+	/* 清除默认样式 */
+}
+
+/* 导航栏标签列表中的li标签样式 */
+#navBar ul li {
+	float: left;
+	margin-top: 5px;
+}
+
+/* 导航栏li标签列表中的a标签样式 */
+#navBar ul li a {
+	display: block;
+	/* 此元素将显示为块级元素，此元素前后会带有换行符。 */
+	padding: 20px;
+	text-align: center;
+}
+
+/* 给导航栏的列表添加效果：鼠标移动到文字上面时底部颜色有变化，并且文字颜色也有相应的改变 */
+/* current是鼠标放置时候的状态 */
+#navBar ul li a:hover,
+#navBar ul li a.current {
+	transition: 0.5s;
+	background: #444;
+	color: coral;
+}
+
+/* 设置主页的背景图片 */
+#showcase {
+	background: url(../img/index_showcase.jpg) no-repeat center center/cover;
+	/* cover是为了能让图片能全覆盖 */
+	height: 900px;
+}
+
+/* 设置主页的文字样式 */
+#showcase .showcase_content {
+	color: #FFFFFF;
+	text-align: center;
+	padding-top: 170px;
+	display: inline-block;
+	/* 让其中的元素能够换行显示 */
+}
+
+/* showcase的文字中的h1标签样式设置*/
+#showcase .showcase_content h1 {
+	font-size: 80px;
+	line-height: 1.2em;
+	margin: 50px;
+}
+
+#showcase .showcase_content p {
+	font-size: 15px;
+	line-height: 1.7em;
+	padding-bottom: 20px;
+	margin: 50px;
+}
+
+/* 首页跳转到关于我的a标签 */
+#showcase .showcase_content a {
+	font-size: 18px;
+	color: white;
+	padding: 13px 20px;
+	background: #FF7F50;
+	display: inline-block;
+}
+
+/* “关于我”鼠标移入的样式设置 */
+#showcase .showcase_content a:hover {
+	transition: 0.5s;
+	background: #FFFFFF;
+	color: #FF7F50;
+	/* 鼠标移入后会改变背景颜色 */
+}
+
+/* home_info部分内容 */
+#home_info {
+	height: 400px;
+	margin-top: 5px;
+	/* home_info元素的高度为400px */
+}
+
+/* info的图片部分*/
+#home_info .home_info_image {
+	float: left;
+	width: 50%;
+	background: url(../img/info1.png) no-repeat center center/cover;
+	height: 100%;
+}
+
+
+/* info中的文字介绍部分 */
+#home_info .home_info_content {
+	float: right;
+	width: 50%;
+	text-align: center;
+	height: 100%;
+	padding: 50px 80px;
+	overflow: auto;
+	background: #333333;
+	color: #FFFFFF;
+}
+
+/* info中的h1标签样式 */
+.home_info_content h1 {
+	font-size: 40px;
+}
+
+/* 介绍中的p标签样式 */
+.home_info_content p {
+	font-size: 20px;
+	margin-bottom: 40px;
+	overflow: auto;
+}
+
+/* info中的a标签样式 */
+.home_info_content a {
+	font-size: 18px;
+	color: white;
+	padding: 13px 20px;
+	background: #FF7F50;
+	display: inline-block;
+}
+
+/* info中的a标签鼠标移入的样式 */
+.home_info_content a:hover {
+	background: #FFFFFF;
+	color: #FF7F50;
+	transition: 0.5s;
+}
+
+/* 更多内容部分 */
+/* 更多内容分为三块内容，more_item是其中一块内容 */
+/* 整体样式 */
+.more_content {
+	height: 400px;
+	text-align: center;
+	margin: 0;
+}
+
+/* 每一块内容的样式设置 */
+/* 亮色调 */
+.more_item_light {
+	width: 33.333%;
+	height: 100%;
+	background: #e7e7e7;
+	padding: 50px;
+	overflow: auto;
+	float: left;
+	margin-top: 5px;
+	border-right: #999 1px solid;
+	color: #333;
+}
+
+/* 暗色调 */
+.more_item_dark {
+	width: 33%;
+	height: 100%;
+	background: #333;
+	padding: 50px;
+	overflow: auto;
+	float: left;
+	margin-top: 5px;
+	border-right: #999 1px solid;
+	color: #FFFFFF;
+}
+
+/* 小图标+文字居中样式 */
+.more_icon {
+	text-align: center;
+}
+
+/* 小图标和文字中的h1标签 */
+.more_icon h1 {
+	margin-top: 10px;
+}
+
+/* 底部的版权申明部分 */
+#main_footer {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	background: #333333;
+	color: white;
+	bottom: 0;
+	line-height: 50px;
+	font-size: 15px;
+}
